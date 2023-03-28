@@ -10,10 +10,18 @@ namespace UserRegistrationProblem_Regex
     public class RegexProblems
     {
         public const string First_Name = "^[A-Z]{1}[a-z]{3}$";
+        public const string Last_Name = "^[A-Z]{1}[a-z]{5}$";
         public void FirstName(string firstname)
         {
             if (Regex.IsMatch(firstname, First_Name))
                 Console.WriteLine("First Name Valid");
+            else
+                Console.WriteLine("Not Valid");
+        }
+        public void LastName(string lastname)
+        {
+            if (Regex.IsMatch(lastname, Last_Name))
+                Console.WriteLine("Last Name Valid");
             else
                 Console.WriteLine("Not Valid");
         }
