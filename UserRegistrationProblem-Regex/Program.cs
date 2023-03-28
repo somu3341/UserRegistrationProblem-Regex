@@ -11,7 +11,7 @@ namespace Regex_UserRegistrationProblem
             while (flag)
             {
                 Console.WriteLine("\nchoose option to Perform \n1.First Name \n2.Last Name \n3.Email \n4.Mobile Number " +
-                    "\n5.Password(Rule-1) \n6.Password(Rule-2) \n7.Exit");
+                    "\n5.Password(Rule-1) \n6.Password(Rule-2) \n7.Password(Rule-3)\n8.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 RegexProblems regular = new RegexProblems();
                 switch (option)
@@ -35,6 +35,9 @@ namespace Regex_UserRegistrationProblem
                         regular.Password2("soMu99S0");
                         break;
                     case 7:
+                        regular.Password3("S023Mae3");
+                        break;
+                    case 8:
                         flag = false;
                         break;
                 }
