@@ -14,6 +14,7 @@ namespace UserRegistrationProblem_Regex
         public const string EMAIL = "^[0-9a-zA-Z]+[.+_]{0,1}[0-9a-zA-Z]+[@][a-zA-Z]+[.][a-zA-Z]{2,3]([.][a-zA-Z]{2,3}){0,1}$";
         public const string MOBILE = "^[1-9]{2}[6-9]{1}[0-9]{9}$";
         public const string PASSWORD_1 = "^[a-zA-Z0-9]{8}";
+        public const string PASSWORD_2 = "^[a-zA-Z0-9]{8}";
         public void FirstName(string firstname)
         {
             if (Regex.IsMatch(firstname, First_Name))
@@ -45,6 +46,13 @@ namespace UserRegistrationProblem_Regex
         public void Passeord1(string password1)
         {
             if (Regex.IsMatch(password1, PASSWORD_1))
+                Console.WriteLine("Password is Valid");
+            else
+                Console.WriteLine("Not Valid");
+        }
+        public void Passeord2(string password2)
+        {
+            if (Regex.IsMatch(password2, PASSWORD_2))
                 Console.WriteLine("Password is Valid");
             else
                 Console.WriteLine("Not Valid");
